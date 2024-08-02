@@ -13,7 +13,7 @@ namespace EFCore8AssociateColumnIssue
 
             var testCtx = new TestContext(optionsBuilder.Options);
 
-            // Throw exception 'Microsoft.Data.SqlClient.SqlException: 'Invalid column name 'OrderId'.
+            // Throw exception 'Microsoft.Data.SqlClient.SqlException: 'Invalid column name 'OrderId'.''
             var orders = await testCtx.Orders.GroupJoin(
                                  testCtx.OrderItems,
                                  order => order.Id,
